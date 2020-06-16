@@ -16,7 +16,7 @@ npm install --save timer-miniprogram
 
 2. 导入小程序适配版本的 timer-miniprogram
 
-```javascript
+```js
 import { TimerBehavior } from 'timer-miniprogram'
 // 在页面中使用
 Page({
@@ -43,6 +43,31 @@ Components({
     })
   }
 })
+```
+
+## eslint 配置
+
+为了让团队更好地遵守定时器使⽤规范，你还可以配置 eslint 增加代码提示，配置如下：
+
+```
+// .eslintrc.js
+module.exports = {
+    'rules': {
+        'no-restricted-globals': ['error', {
+            'name': 'setTimeout',
+            'message': 'Please use TimerBehavior and this.$setTimeout instead. see the link: https://github.com/o2team/timer-miniprogram'
+        }, {
+            'name': 'setInterval',
+            'message': 'Please use TimerBehavior and this.$setInterval instead. see the link: https://github.com/o2team/timer-miniprogram'
+        }, {
+            'name': 'clearInterval',
+            'message': 'Please use TimerBehavior and this.$clearInterval instead. see the link: https://github.com/o2team/timer-miniprogram'
+        }, {
+            'name': 'clearTimout',
+            'message': 'Please use TimerBehavior and this.$clearTimout  instead. see the link: https://github.com/o2team/timer-miniprogram'
+        }]
+    }
+}
 ```
 
 ## License
