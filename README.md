@@ -22,12 +22,15 @@ import { TimerBehavior } from 'timer-miniprogram'
 Page({
   behaviors: [TimerBehavior],
   onReady() {
-    this.$setTimeout(() => {
+    const timer1 = this.$setTimeout(() => {
       console.log('setTimeout')
     })
-    this.$setInterval(() => {
-      console.log('setTimeout')
+    this.$clearTimeout(timer1)
+
+    const timer2 = this.$setInterval(() => {
+      console.log('setInterval')
     })
+    this.$clearInterval(timer2)
   }
 })
 
@@ -35,12 +38,15 @@ Page({
 Components({
   behaviors: [TimerBehavior],
   ready() {
-    this.$setTimeout(() => {
+    const timer1 = this.$setTimeout(() => {
       console.log('setTimeout')
     })
-    this.$setInterval(() => {
-      console.log('setTimeout')
+    this.$clearTimeout(timer1)
+
+    const timer2 = this.$setInterval(() => {
+      console.log('setInterval')
     })
+    this.$clearInterval(timer2)
   }
 })
 ```
