@@ -1,6 +1,7 @@
 # timer-miniprogram
 
-小程序定时器管理库，更合理地使用 setTimeout 和 setInterval，在页面显示时重启定时器，页面隐藏时暂停定时器，页面卸载时清除定时器
+小程序定时器管理库，更合理地使用 setTimeout 和 setInterval，在页面显示时重启定时器，页面隐藏时暂停定时器，页面卸载时清除定时器。
+写这个库的缘由[详看](https://aotu.io/notes/2020/06/22/timer-miniprogram/)。
 
 ## 使用
 
