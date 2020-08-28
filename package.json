@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "miniprogram": "src",
   "scripts": {
-    "lint": "eslint \"src/*.js\""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -37,7 +37,9 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "prettier": "^1.12.1",
-    "prettier-eslint": "^8.8.1"
+    "prettier-eslint": "^8.8.1",
+    "jest": "^24.6.0",
+    "@types/jest": "^24.0.18"
   },
   "bugs": {
     "url": "https://github.com/o2team/timer-miniprogram/issues"
